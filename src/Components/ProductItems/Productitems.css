@@ -1,0 +1,38 @@
+.list_container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+}
+.list_container .list{
+    width:90%;
+    height: auto;
+}
+.grid-col{ 
+    margin:auto;
+  }
+
+img {
+    height: 100%;
+}
+
+.description{   
+   
+    color:rgb(82, 78, 78);
+    font-size: 26px;
+    margin: 20px auto;
+    text-decoration: none;
+}
+.description:hover{
+   
+    -webkit-transition: .5s;
+    transition: .5s;
+    color:#b08ead;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.price{
+    color:#b08ead;
+    margin-bottom: 60px;
+}
