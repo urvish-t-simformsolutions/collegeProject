@@ -10,3 +10,57 @@
   color: white;
   margin: auto;
 }
+
+.about {
+  max-width: 50%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
+}
+.about h5 {
+  font-size: 20px;
+  color: #b08ead;
+  font-weight: 400;
+}
+
+.about h3 {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #4b3049;
+  margin: 5px 0 60px;
+  font-weight: 400;
+}
+
+.about_contain {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.about_us_video {
+  position: relative;
+}
+
+.about .img_fluid {
+  max-width: 100%;
+  height: auto;
+}
+.about_video_icon {
+  height: 84px;
+  width: 84px;
+  line-height: 84px;
+  border-radius: 50%;
+  background-color: #795376;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 41%;
+}
+
+.about a {
+  color: white;
+  text-align: center;
+}
