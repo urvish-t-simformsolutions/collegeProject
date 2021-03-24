@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../Logo/Logo";
 import "./Footer.css";
+import { useAuth } from "../../../Context/AuthContext";
 
 const Footer = () => {
+  const { currentUser } = useAuth();
   return (
     <>
       <footer className="footer_part">
@@ -16,7 +18,8 @@ const Footer = () => {
               <Link to="/home">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/product">Products</Link>
-              <Link to="/SignUp">SignUp</Link>
+              {currentUser?.uid ? null : <Link to="/login">Login</Link>}
+              {currentUser?.uid ? <Link to="/profile">Profile</Link> : null}
               <Link to="/contact">Contact</Link>
             </div>
             <div className="footer_social">

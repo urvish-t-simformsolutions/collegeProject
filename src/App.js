@@ -8,7 +8,6 @@ import ScrollToTop from "./Components/fixPageComp/ScrollToTop/ScrollToTop";
 import Login from "./Container/Login/Login";
 import SignUp from "./Container/SignUp/SignUp";
 import { AuthProvider } from "./Context/AuthContext";
-//import Cart from './Container/Cart/Cart';
 import Checkout from "./Container/Checkout/Checkout";
 import Profile from "./Container/Profile/Profile";
 import PrivateRoutes from "./Context/PrivateRoute";

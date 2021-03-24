@@ -15,9 +15,20 @@ const NavigationItems = (props) => {
         <NavigationItem>
           <Link to="/about">About</Link>
         </NavigationItem>
-        <NavigationItem>
-          <Link to="/product">Product</Link>
-        </NavigationItem>
+        <div className="product_nav">
+          <NavigationItem>
+            <Link to="/product">Product</Link>
+          </NavigationItem>
+        </div>
+        <div className="nav-category-option">
+          <div onClick={() => {}} className="option-nav">
+            <button value="Low to High">Category 1</button>
+            <button value="High to Low">Category 2</button>
+            <button value="High to Low">Category 3</button>
+            <button value="High to Low">Category 4</button>
+          </div>
+        </div>
+
         {currentUser?.uid ? null : (
           <NavigationItem>
             <Link to="/login">Login</Link>
