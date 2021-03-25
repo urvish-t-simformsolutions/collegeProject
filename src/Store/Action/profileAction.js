@@ -81,35 +81,3 @@ export const setFormDetails = (details) => {
     });
   };
 };
-
-// export const updateFormDetails = (details) => {
-//     return dispatch => {
-//         dispatch({ type: actionTypes.UPDATE_DETAIL_START })
-//         axios.get("/userDetails.json")
-//             .then(res => {
-//                 // console.log("get data", res.data)
-//                 // console.log(res.data.name);
-//                 let key = Object.keys(res.data)
-//                 Object.keys(res.data).map((item, index) => {
-//                     // console.log("keys", item);
-//                     key = item
-//                     if (details.id === res.data[item].id) {
-
-//                         axios.put("/userDetails/" + key + "/details.json", details.details)
-//                         // .then(res => {
-//                         //     console.log(res.data)
-//                         // })
-//                         // .catch(error => {
-//                         //     console.log(error)
-//                         // })
-//                     } else {
-//                         axios.post("/userDetails.json", details)
-//                     }
-//                 })
-//             })
-//             .catch(error => {
-//                 console.log(error)
-//             })
-//         //   dispatch({type:actionTypes.UPDATE_DETAIL_END})
-//     }
-// }
