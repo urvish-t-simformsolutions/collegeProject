@@ -17,7 +17,11 @@ const ProductDetail = (props) => {
       quantity: quantity,
     };
     props.onAddToCart(cart, quantity);
-    props.addToCartDb(details, currentUser.uid);
+    if (currentUser) {
+      props.addToCartDb(details, currentUser.uid);
+    } else {
+      return;
+    }
   };
   const increment = () => {
     if (value < 10) {

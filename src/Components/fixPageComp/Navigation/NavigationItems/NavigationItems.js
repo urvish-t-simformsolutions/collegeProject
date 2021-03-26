@@ -22,10 +22,10 @@ const NavigationItems = (props) => {
         </div>
         <div className="nav-category-option">
           <div onClick={() => {}} className="option-nav">
-            <button value="Low to High">Category 1</button>
-            <button value="High to Low">Category 2</button>
-            <button value="High to Low">Category 3</button>
-            <button value="High to Low">Category 4</button>
+            <button value="pillow">Pillow</button>
+            <button value="mattress">Mattress</button>
+            <button value="bed">Bed</button>
+            <button value="night lamp">Night Lamp</button>
           </div>
         </div>
 

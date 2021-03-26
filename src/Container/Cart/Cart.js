@@ -5,31 +5,24 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
 
-//import axios from "axios";
-
 const Cart = (props) => {
-  //   componentDidMount() {
-  //     this.props.onPriceUpdate();
-  //   }
-  //   componentDidUpdate() {
-  //     this.props.onPriceUpdate();
-  //   }
   const { currentUser } = useAuth();
   const { onPriceUpdate, getFromCartDb, onDecrement, onIncrement } = props;
 
   const [updateCart, setUpdateCart] = useState(false);
 
   useEffect(() => {
-    getFromCartDb(currentUser.uid);
+    if (currentUser) {
+      getFromCartDb(currentUser.uid);
+    } else {
+      return;
+    }
     onPriceUpdate();
   }, []);
 
   useEffect(() => {
     onPriceUpdate();
   }, [props.cart]);
-  //   onClick = this.onClick.bind(this);
-  //   decrementValue = this.decrementValue.bind(this);
-  //   incrementValue = this.incrementValue.bind(this);
 
   const onClick = () => {
     onPriceUpdate();
@@ -134,9 +127,15 @@ const Cart = (props) => {
             </tr>
           </tbody>
         </table>
-        <Link className="btn_6" to="/checkout">
-          Proceed to checkout
-        </Link>
+        {currentUser?.uid ? (
+          <Link className="btn_6" to="/checkout">
+            Proceed to checkout
+          </Link>
+        ) : (
+          <Link className="btn_6" to="/login">
+            Proceed to checkout
+          </Link>
+        )}
       </div>
     );
   }
